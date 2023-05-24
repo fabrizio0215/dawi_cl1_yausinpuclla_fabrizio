@@ -181,6 +181,8 @@ public class Registro_Yausin extends JFrame {
 					imprimir("Apellido.........:"+a.getApellido_alumno());
 					imprimir("Telefono.....:"+a.getTlf_alumno());
 					imprimir("Carrera..:"+a.getCod_carrera()+"-"+a.getObjCarrera().getNombre_carrera());
+					imprimir("Carrera..:"+a.getCod_carrera()+"-"+a.getObjCarrera().getNombre_carrera());
+
 					imprimir("---------------------------");
 				}
 	}

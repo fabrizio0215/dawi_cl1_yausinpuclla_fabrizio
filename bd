@@ -1,0 +1,27 @@
+DROP DATABASE IF EXISTS ec1_Yausin;
+CREATE DATABASE ec1_Yausin;
+USE ec1_Yausin;
+
+create table carrera(
+cod_carrera	 int not null primary key,
+nombre_carrera varchar(15),
+precio double
+);
+
+
+create table alumno(
+cod_alumno    char(5),
+nombre_alumno varchar(20),
+apellido_alumno varchar(20),
+dni_alumno varchar(20),
+tlf_alumno varchar(20),
+edad_alumno int,
+cod_carrera int,
+primary key(cod_alumno),
+constraint fk_carrera foreign key (cod_carrera) references carrera(cod_carrera)
+);
+
+insert into carrera values (1, 'Computacion', 600);
+insert into carrera values (2, 'Arquitectura',700);
+insert into carrera values (3, 'Medicina',800);
+SELECT * FROM carrera;
